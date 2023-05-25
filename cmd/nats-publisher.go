@@ -27,7 +27,7 @@ func main() {
 			log.Printf("error: %s", err.Error())
 		}
 		log.Printf("Published [%s] : '%s'\n", config.Subj, order)
-		time.Sleep(25 * time.Second)
+		time.Sleep(config.Sleep * time.Second)
 	}
 
 }

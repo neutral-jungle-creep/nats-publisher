@@ -3,6 +3,7 @@ package configs
 import (
 	"flag"
 	"github.com/spf13/viper"
+	"time"
 )
 
 type Config struct {
@@ -10,6 +11,7 @@ type Config struct {
 	ClientID  string
 	URL       string
 	Subj      string
+	Sleep     time.Duration
 }
 
 func NewConfig() *Config {
@@ -18,6 +20,7 @@ func NewConfig() *Config {
 		ClientID:  viper.GetString("nats.client"),
 		ClusterID: viper.GetString("nats.cluster"),
 		Subj:      viper.GetString("nats.subj"),
+		Sleep:     viper.GetDuration("sys.sleep"),
 	}
 }
 

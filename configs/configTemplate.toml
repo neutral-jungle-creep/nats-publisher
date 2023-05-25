@@ -1,0 +1,8 @@
+[nats]
+cluster = "test-cluster"
+client = "stan-pub"
+URL       = "127.0.0.1:4222"
+subj = "test"
+
+[sys]
+sleep = 25
